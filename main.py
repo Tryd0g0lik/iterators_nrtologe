@@ -1,6 +1,17 @@
 import decision as dec
 
 
+"""ВОПРОС
+В каких задачах по факту применятся итератор?
+На курсе упоминалась ситуация - подсчет веса.
+Но вчем там особенность логики, из-за которой приходится применить итератор?
+
+
+https://prnt.sc/9wIfi5ByXZwu
+Какая логика вшита в функцию next(...)?
+
+"""
+
 
 if __name__ == ('__main__'):
   # l = []
@@ -10,20 +21,22 @@ if __name__ == ('__main__'):
     ['d', 'e', 'f', 'h', False],
     [1, 2, None]
   ]
-  o = (dec.SingleList3(iter(nested_list)))
-
+  objec = dec.IteratorTask1(nested_list)
   print("----------должен быть такой список------------")
-  for l in dec.SingleList2(nested_list):
+  for l in next(iter(objec)):
     print(l)
-    break
+
 
   print("----------")
-  r = [(res) for res in next(dec.SingleList3(iter(nested_list)))]
-  print(r)
+  flat_list = [res for res in next(dec.IteratorTask1(iter(nested_list)))]
+  print("flat_list: ", flat_list)
 
 
-  print("----------Должен отпечататься каждый----------")
-  for obj in next(dec.SingleList3(iter(nested_list))):
-    print(obj)
+  print("----------Написать генератор ----------")
+  mylist = []
+  for element in dec.GenratorTask2(nested_list):
+    mylist.append(element)
+  print(mylist)
+
 
 
