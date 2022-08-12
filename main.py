@@ -31,12 +31,23 @@ if __name__ == ('__main__'):
   flat_list = [res for res in next(dec.IteratorTask1(iter(nested_list)))]
   print("flat_list: ", flat_list)
 
-
+  print()
+  print()
   print("----------Написать генератор ----------")
   mylist = []
   for element in dec.GenratorTask2(nested_list):
     mylist.append(element)
   print(mylist)
+  print("---------------")
+  print("---------------")
+  nested_list2 = [
+      ['a', [11, 5, ['sss', 'ddd', None], 91], 'c'],
+      ['d', 'e', 'f', 'h', False],
+      [1, 2, None]]
 
+  li = iter(nested_list2)
+  o = dec.IteratorTask4(next(li))
+  for el in (o):
+    print(el)
 
 

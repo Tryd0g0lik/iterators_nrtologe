@@ -24,7 +24,39 @@ def GenratorTask2(lists):
       yield li
 
 
+class IteratorTask3:
+  def __init__(self, lists):
+    self.lists = lists
+    self.ind = 0
 
+  def __iter__(self):
+    return self
 
+  def __next__(self):
+
+    for item in self.lists:
+      if list == type(item):
+        return IteratorTask3(item)
+
+      else:
+        yield item
+
+class IteratorTask4:
+  def __init__(self, lists):
+    self.lists = lists
+    self.ind = 0
+
+  def __iter__(self):
+    return self
+
+  def __next__(self):
+
+    for item in self.lists:
+      # if list == type(item):
+      if isinstance(item, list):
+        self.lists = self.IteratorTask4(next(item))
+
+      else:
+        return item
 
 
