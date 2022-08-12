@@ -53,7 +53,7 @@ class IteratorTask4:
 
     for item in self.lists:
       # if list == type(item):
-      if isinstance(item, list):
+      if type(item) == list:
         self.lists = self.IteratorTask4(next(item))
 
       else:
