@@ -22,7 +22,7 @@ if __name__ == ('__main__'):
     [1, 2, None]
   ]
   objec = dec.IteratorTask1(nested_list)
-  print("----------должен быть такой список------------")
+  print("----------1. Написать итератор------------")
   for l in next(iter(objec)):
     print(l)
 
@@ -33,11 +33,12 @@ if __name__ == ('__main__'):
 
   print()
   print()
-  print("----------Написать генератор ----------")
+  print("----------2. Написать генератор ----------")
   mylist = []
   for element in dec.GenratorTask2(nested_list):
     mylist.append(element)
   print(mylist)
+
   print("---------------")
   print("---------------")
   nested_list2 = [
