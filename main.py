@@ -14,7 +14,11 @@ https://prnt.sc/9wIfi5ByXZwu
 
 
 if __name__ == ('__main__'):
-  # l = []
+  nested_list2 = [
+    ['a', [11, 5, ['sss', 'ddd', None], 91], 'c'],
+    ['d', 'e', 'f', 'h', False],
+    [1, 2, None]]
+
   i = 0
   nested_list = [
     ['a', 'b', 'c'],
@@ -25,7 +29,6 @@ if __name__ == ('__main__'):
   print("----------1. Написать итератор------------")
   for l in next(iter(objec)):
     print(l)
-
 
   print("----------")
   flat_list = [res for res in next(dec.IteratorTask1(iter(nested_list)))]
@@ -41,14 +44,24 @@ if __name__ == ('__main__'):
 
   print("---------------")
   print("---------------")
-  nested_list2 = [
-      ['a', [11, 5, ['sss', 'ddd', None], 91], 'c'],
-      ['d', 'e', 'f', 'h', False],
-      [1, 2, None]]
 
-  li = iter(nested_list2)
-  o = dec.IteratorTask4(next(li))
-  for el in (o):
+  print("----------3. *Написать итератор аналогичный ----------")
+  # o = dec.IteratorTask3(nested_list2)
+
+  for el in dec.IteratorTask3(nested_list2):
     print(el)
 
 
+  # nested_list2 = [
+  #   ['a', [11, 5, ['sss', 'ddd', None], 91], 'c'],
+  #   ['d', 'e', 'f', 'h', False],
+  #   [1, 2, None]]
+
+
+# 18.08. 13:40
+# 315
+#
+# анотация типов - прочитать
+#
+# Класс метод
+# Стат метод
