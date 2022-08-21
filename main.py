@@ -42,14 +42,14 @@ if __name__ == ('__main__'):
     mylist.append(element)
   print(mylist)
 
-  print("---------------")
-  print("---------------")
-
-  print("----------3. *Написать итератор аналогичный ----------")
+  # print("---------------")
+  # print("---------------")
+  #
+  # print("----------3. *Написать итератор аналогичный ----------")
   # o = dec.IteratorTask3(nested_list2)
 
-  for el in dec.IteratorTask3(nested_list2):
-    print(el)
+  # for el in dec.IteratorTask3(nested_list2):
+  #   print(el)
 
 
   # nested_list2 = [
