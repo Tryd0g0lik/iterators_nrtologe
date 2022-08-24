@@ -29,25 +29,3 @@ def generate(lists):
         exit()
       yield (l)
 
-"------------------Part three------------------"
-def infinity(lists):
-    lis = (lists)
-    li = []
-    for el in lis:
-      if isinstance(el, list):
-        # new_list = lists.pop(lists.index(el)) + lists
-        lis = lis.pop(lis.index(el)) + lis
-        # lists = el + f
-        infinity(lis)
-        continue
-      # yield
-
-      else:
-        li += el
-
-
-    for l in li:
-      if li == []:
-        exit()
-
-      yield (l)

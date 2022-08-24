@@ -1,4 +1,4 @@
-from dec import Iterator, generate, infinity
+from dec import Iterator, generate
 
 if __name__ == "__main__":
   nested_list = [
@@ -18,12 +18,4 @@ if __name__ == "__main__":
   el = [el for el in generate(nested_list)]
   print(el)
   print()
-  print("------------------Part three------------------")
-  nested_list = [
-    ['a', ['e', 'f', [1, 2, None], False, 2, None], 'c'],
-    ['d', 'e', 'f', 'h', False],
-    [1, 2, None]
-  ]
-  el = [el for el in infinity(nested_list)]
-  print(el)
 
