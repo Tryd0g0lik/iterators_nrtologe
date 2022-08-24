@@ -28,4 +28,3 @@ def generate(lists):
       if li == []:
         exit()
       yield (l)
-
